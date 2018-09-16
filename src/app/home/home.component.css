@@ -1,0 +1,10 @@
+body {
+    background-image: url("../images/sky-earth-galaxy-universe.jpg");
+    background-color: black;
+    background-attachment: fixed;
+}
+#list {
+    font-weight: bolder;
+    font: outline;
+    font-size: xx-large; 
+}

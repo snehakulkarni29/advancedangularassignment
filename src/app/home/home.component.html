@@ -1,0 +1,9 @@
+<body>
+<h1>
+    Welcome to {{ title }}!
+  </h1>
+<ul *ngFor="let region of regions" id="list">
+    <li><a [routerLink]="['/region', region]">{{region}}</a></li>
+</ul>
+</body>
+<router-outlet></router-outlet>

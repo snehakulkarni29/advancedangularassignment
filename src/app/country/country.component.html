@@ -1,0 +1,51 @@
+<div style="text-align:center">
+  <h1>
+    Welcome to {{ country }}!
+  </h1>
+</div>
+<a [routerLink]="['']">Home</a>
+  <ul *ngFor="let detail of country_details">
+    <ul>
+      {{ detail.name }}
+    </ul>
+    <ul>
+      {{ detail.capital }}
+    </ul>
+    <ul>
+      {{ detail.region }}
+    </ul>
+    <ul>
+      {{ detail.subregion }}
+    </ul>
+    <ul>
+      {{ detail.population }}
+    </ul>
+    <ul>
+      {{ detail.demonym }}
+    </ul>
+    <ul>
+      {{ detail.area }}
+    </ul>
+    <ul>
+      {{ detail.gini }}
+    </ul>
+    <ul>
+        <img src="{{ detail.flag }} " width="60" height="60  ">
+    </ul>
+    <ul>
+      <ul *ngFor="let currency of detail.currencies">
+          <ul>
+              <a [routerLink]="['/currency' ,currency.code]">{{ currency.name }}</a>
+            </ul>
+      </ul>
+    </ul>
+    <ul>
+        <ul *ngFor="let language of detail.languages">
+            <ul>
+                <a [routerLink]="['/language',language.iso639_2]">{{ language.name }}</a>
+              </ul>
+        </ul>
+      </ul>
+  </ul>
+  <a [routerLink]="['']">Home</a>
+  <router-outlet></router-outlet>

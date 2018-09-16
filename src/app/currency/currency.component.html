@@ -1,0 +1,16 @@
+<div style="text-align:center">
+    <h1>
+      List of Countries using currency {{ currency }}!
+    </h1>
+  </div>
+  <a [routerLink]="['']">Home</a>
+    <ul *ngFor="let country of countries">
+      <div class="container">
+          <div>
+                <img src="{{ country.flag }} " width="60" height="60  ">
+                <a [routerLink]="['/country', country.name]">{{ country.name }}</a>
+          </div>
+        </div>
+    </ul>
+    <a [routerLink]="['']">Home</a>
+    <router-outlet></router-outlet>
